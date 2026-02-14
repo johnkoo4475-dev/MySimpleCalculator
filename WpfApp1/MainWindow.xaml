@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Calculator" Height="450" Width="350">
-    <Grid Margin="8">
+        Title="Calculator" Height="450" Width="350" Background="#FFE2F1F1">
+    <Grid Margin="18">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -24,9 +24,10 @@
 
         <TextBox x:Name="Display" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
                  Height="80" FontSize="32" VerticalContentAlignment="Center"
-                 TextAlignment="Right" IsReadOnly="True" Text="0" />
+                 TextAlignment="Right" IsReadOnly="True" Text="0" MaxLength="50" />
 
-        <!-- Row 1 -->        
+        <!-- Row 1 -->
+        
         <Button Grid.Row="1" Grid.Column="0" Content="C" FontSize="18" Click="Clear_Click" />
         <Button Grid.Row="1" Grid.Column="2" Content="/" FontSize="18" Click="Op_Click" />
         <Button Grid.Row="1" Grid.Column="3" Content="*" FontSize="18" Click="Op_Click" />
@@ -37,17 +38,20 @@
         <Button Grid.Row="2" Grid.Column="2" Content="9" FontSize="18" Click="Digit_Click" />
         <Button Grid.Row="2" Grid.Column="3" Content="-" FontSize="18" Click="Op_Click" />
 
-        <!-- Row 3 -->        <Button Grid.Row="3" Grid.Column="0" Content="4" FontSize="18" Click="Digit_Click" />
+        <!-- Row 3 -->
+        <Button Grid.Row="3" Grid.Column="0" Content="4" FontSize="18" Click="Digit_Click" />
         <Button Grid.Row="3" Grid.Column="1" Content="5" FontSize="18" Click="Digit_Click" />
         <Button Grid.Row="3" Grid.Column="2" Content="6" FontSize="18" Click="Digit_Click" />
         <Button Grid.Row="3" Grid.Column="3" Content="+" FontSize="18" Click="Op_Click" />
 
-        <!-- Row 4 -->        <Button Grid.Row="4" Grid.Column="0" Content="1" FontSize="18" Click="Digit_Click" />
+        <!-- Row 4 -->
+        <Button Grid.Row="4" Grid.Column="0" Content="1" FontSize="18" Click="Digit_Click" />
         <Button Grid.Row="4" Grid.Column="1" Content="2" FontSize="18" Click="Digit_Click" />
         <Button Grid.Row="4" Grid.Column="2" Content="3" FontSize="18" Click="Digit_Click" />
         <Button Grid.Row="4" Grid.Column="3" Content="=" FontSize="18" Grid.RowSpan="2" Click="Equals_Click" />
 
-        <!-- Row 5 -->        <Button Grid.Row="5" Grid.Column="0" Content="0" FontSize="18" Click="Digit_Click" />
+        <!-- Row 5 -->
+        <Button Grid.Row="5" Grid.Column="0" Content="0" FontSize="18" Click="Digit_Click" />
         <Button Grid.Row="5" Grid.Column="1" Content="." FontSize="18" Click="Decimal_Click" />
         <Button Grid.Row="5" Grid.Column="2" Content="+/-" FontSize="18" Click="Negate_Click" />
 
